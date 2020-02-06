@@ -6,7 +6,7 @@
 
 stages:
   - build
-  # - publish
+  - publish
 
 build:
   stage: build
