@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://gitlab.com/northscaler/protected/mongo-test-support.git"
   },
+  "publishConfig": {
+  "@northscaler:registry":"https://gitlab.com/api/v4/projects/15709302/packages/npm/"
+  },
   "keywords": [
     "mongo",
     "mongoose"
