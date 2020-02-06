@@ -24,7 +24,6 @@ publish:
   script:
     # - npm install --registry http://verdaccio:4873 # HACK
     - *authenticate-to-npmjs
-    - cat ~/.npmrc
     - npm run make-distribution
     - cd lib/main
     - npm publish --access restricted
