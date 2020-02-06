@@ -6,7 +6,7 @@
 
 stages:
   - build
-  - publish
+  # - publish
 
 build:
   stage: build
@@ -24,7 +24,7 @@ publish:
   script:
     # - npm install --registry http://verdaccio:4873 # HACK
     - *authenticate-to-npmjs
-    - cat ~/.nprc
+    - cat ~/.npmrc
     - npm run make-distribution
     - cd lib/main
     - npm publish --access restricted
