@@ -18,12 +18,13 @@ publish:
   stage: publish
   image: node:8-alpine
   services: # HACK see https://gitlab.com/gitlab-org/gitlab/issues/55344
-    - name: verdaccio/verdaccio
-      alias: verdaccio
+    # - name: verdaccio/verdaccio
+    #   alias: verdaccio
     - mongo
   script:
-    - npm install --registry http://verdaccio:4873 # HACK
+    # - npm install --registry http://verdaccio:4873 # HACK
     - *authenticate-to-npmjs
+    - cat ~/.nprc
     - npm run make-distribution
     - cd lib/main
     - npm publish --access restricted
